@@ -1,0 +1,17 @@
+before pushing back each token, we first have to do a check, we have 2 cases:
+1- the string contains a special char + not surrounded by "" or '' 
+(or even smt like : echo "he"llo => hello
+  if it has some certain special charachters, it passes, others => error
+ example            echo "he"ll%o => hell%o
+                    echo "he"ll*o => error
+)
+one certain thing   echo "whatever chars" does never error
+                    echo "lkf"l'    => error (obviously)
+
+
+
+
+last log:       utils.c   => write a function that takes string and char and (return a t_token* if a case like: (fun("-la;pwd;echo"), ';') 
+-la;pwd;echo => -la -> ; -> pwd -> ; -> echo )         === V
+
+last log:      solve an issue, it has been screenshoted, a segmentation fault, probaly its the split_str_to_tokens function

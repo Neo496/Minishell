@@ -1,43 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atouba <atouba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 07:33:09 by atouba            #+#    #+#             */
-/*   Updated: 2022/05/20 13:57:32 by atouba           ###   ########.fr       */
+/*   Created: 2022/05/20 11:04:23 by atouba            #+#    #+#             */
+/*   Updated: 2022/05/21 22:33:02 by atouba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../header.h"
 
-int	ft_lstsize(t_list *lst)
+int main()
 {
-	t_list	*curr;
-	int		i;
-
-	i = 0;
-	curr = lst;
-	while (curr != 0)
-	{
-		i++;
-		curr = curr->next;
-	}
-	return (i);
-}
-
-int	ft_tokens_size(t_token *lst)
-{
-	t_token	*curr;
-	int		i;
-
-	i = 0;
-	curr = lst;
-	while (curr != 0)
-	{
-		i++;
-		curr = curr->next;
-	}
-	return (i);
+    // t_token *start;
+    // char    *s = malloc(sizeof(char) * 6);
+    // s = "hello";
+    // start = ft_tokennew(s, NULL);
+    // printf("%s\n", start->token);
+    // printf("%s\n", ft_substr("hello", 0, 3));
+    printf("%d\n", first_occ("abcd", 'c'));
 }

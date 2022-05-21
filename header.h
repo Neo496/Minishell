@@ -6,7 +6,7 @@
 /*   By: atouba <atouba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/14 14:54:34 by atouba            #+#    #+#             */
-/*   Updated: 2022/05/17 17:20:54 by atouba           ###   ########.fr       */
+/*   Updated: 2022/05/21 21:36:21 by atouba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "libft/libft.h"
 
-#include <stdio.h>
+//#include <stdio.h>
 #include <stdlib.h>
 #include <sys/wait.h>
 #include <signal.h>
@@ -32,6 +32,8 @@
 #include <fcntl.h>                  //
 #include <errno.h>                  //
 
+/*----------------------------------------------------------------*/
+
 typedef struct s_line
 {
 	char	**commands;
@@ -40,5 +42,22 @@ typedef struct s_line
 }				t_line;
 
 
+int	first_occ(char *s, char c);
+
+// typedef struct node
+// {
+// 	struct node	*left;
+// 	struct node	*right;
+// 	struct node	*parent;
+// 	char	node_type; // ';' or '&' or '|' or 'e' or ''
+// 	char	**block; // != NUll if this node_type == 'e' 
+// }  				t_node;
+
+// typedef struct tokens
+// {
+// 	char		*token;
+// 	struct tokens	*prev;
+// 	struct tokens	*next;
+// }			t_token;
 
 #endif

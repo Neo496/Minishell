@@ -1,7 +1,7 @@
 NAME = minishell
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
-FILES = Sources/main.c
+FILES = Sources/main.c Sources/utils.c
 
 FILES_A = \
 		libft/ft_memset.c \

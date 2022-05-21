@@ -1,43 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atouba <atouba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 07:33:09 by atouba            #+#    #+#             */
-/*   Updated: 2022/05/20 13:57:32 by atouba           ###   ########.fr       */
+/*   Created: 2022/05/21 20:40:14 by atouba            #+#    #+#             */
+/*   Updated: 2022/05/21 21:35:55 by atouba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../header.h"
 
-int	ft_lstsize(t_list *lst)
+int	first_occ(char *s, char c)
 {
-	t_list	*curr;
-	int		i;
+	int	i;
 
 	i = 0;
-	curr = lst;
-	while (curr != 0)
+	while (s[i])
 	{
+		if (s[i] == c)
+			return (i);
 		i++;
-		curr = curr->next;
-	}
-	return (i);
-}
-
-int	ft_tokens_size(t_token *lst)
-{
-	t_token	*curr;
-	int		i;
-
-	i = 0;
-	curr = lst;
-	while (curr != 0)
-	{
-		i++;
-		curr = curr->next;
 	}
 	return (i);
 }
